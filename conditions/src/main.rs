@@ -18,4 +18,17 @@ fn main() {
         counter -= 1;
     }
     println!("Take Off!");
+
+
+    /*loop */
+    let mut index = 1;
+    loop {
+        index += 1;
+        println!("Index {}", index);
+
+        if index == 100 {
+            println!("Max index reached");
+            break;
+        }
+    }
 }

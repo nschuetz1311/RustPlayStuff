@@ -9,4 +9,13 @@ fn main() {
     for element in arr {
         println!("{}", element)
     }
+
+    /*while */
+    let mut counter = 10;
+    println!("Countdown!");
+    while (counter > 0) {
+        println!("{}", counter);
+        counter -= 1;
+    }
+    println!("Take Off!");
 }

@@ -8,10 +8,20 @@ fn main() {
     let mut name = String::from("Niko");            // Ownership for name is at main
     name = print_greeting(name);                    // Ownership is transferred to  print_greeting
     println!("I own the string '{name}' again");    // As Ownership has been returned by the function we can still use it
+
+    let name2 = String::from("Alex");         
+    print_greeting_ref(&name2);                     // instead of transferring the ownership we can only reference the string           
+    println!("I still own the string '{name2}'");   // this leads to no ownership loss when using it in the main function again
+
 }
 
 
 fn print_greeting (name: String) -> String {
     println!("Welcome {name}");
     name                        // ensures Ownership is returned
+}
+
+// change the variable type to &(reference)type to ensure you can access it correctly
+fn print_greeting_ref (name: &String) {
+    println!("Welcome {name}");
 }

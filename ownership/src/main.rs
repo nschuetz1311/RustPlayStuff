@@ -6,7 +6,7 @@ fn main() {
 
 
     let mut name = String::from("Niko");            // Ownership for name is at main
-    name = print_greeting(name);                    // Ownership is trnasferred to  print_greeting
+    name = print_greeting(name);                    // Ownership is transferred to  print_greeting
     println!("I own the string '{name}' again");    // As Ownership has been returned by the function we can still use it
 }
 

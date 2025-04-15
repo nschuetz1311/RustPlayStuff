@@ -31,4 +31,18 @@ fn main() {
             break;
         }
     }
+
+    /*fibonacci loop */
+    let mut a: i32 = 0;
+    let mut b: i32 = 1;
+    let mut index: i32 = 0;
+    loop {
+        println!("{}",a);
+        println!("{}",b);
+        a = a + b;
+        b = a + b;
+
+        index += 1;
+        if index == 5 { break;}
+    }
 }

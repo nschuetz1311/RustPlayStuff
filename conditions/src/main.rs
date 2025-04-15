@@ -45,4 +45,15 @@ fn main() {
         index += 1;
         if index == 5 { break;}
     }
+
+    /*Average Temperature */
+    let temp_of_week_arr: [f64; 7] = [70.1, 80.2, 75.3, 68.0, 77.7, 78.0, 69.4];
+    let mut sum_of_temps: f64 = 0.0;
+    
+    for daily_temp in temp_of_week_arr {
+        sum_of_temps += daily_temp;
+    }
+
+    println!("average temperature is: {}",(sum_of_temps / temp_of_week_arr.len() as f64));
+    
 }

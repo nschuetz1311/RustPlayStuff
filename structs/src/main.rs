@@ -9,6 +9,9 @@ fn greet_user(user:&User) {
     println!("Hello {}, you have signed in {} times", user.name, user.sign_in_count);
 }
 
+struct Color (i32,i32,i32); // RGB values
+struct Point (f64,f64,f64); // xyz coordinates
+
 fn main() {
     let user1 = User{
         name:String::from("Niko"),
@@ -18,4 +21,8 @@ fn main() {
     };
     // println!("name: {}", user1.name);
     greet_user(&user1);
+
+    let red = Color(0xff,0,0);
+    let p1 = Point(100.9, 25.6, 37.6);
+
 }

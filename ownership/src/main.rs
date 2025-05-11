@@ -13,6 +13,10 @@ fn main() {
     print_greeting_ref(&name2);                     // instead of transferring the ownership we can only reference the string
     println!("I still own the string '{name2}'");   // this leads to no ownership loss when using it in the main function again
 
+    /*Slice Type */
+    let message = String::from("Hello World!");
+    let slice = &message[..5];          // to slice always use a reference to the string.(&) 'x..y' specifies where the slice starts.
+    println!("{slice}")                       // if starting at 0 you can skip x and if going to the end you can skip y
 }
 
 

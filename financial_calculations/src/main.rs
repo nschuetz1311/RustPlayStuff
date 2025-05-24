@@ -1,5 +1,7 @@
 mod interest;
 mod tax_calc;
+use num::integer::gcd;
+use num::integer::lcm;
 
 fn main() {
     let income = 45000.0;
@@ -21,4 +23,13 @@ fn main() {
 
     let tax_rate = tax_calc::get_tax_rate (income);
     println!("Tax Rate: {:.2}%", tax_rate * 100.0);
+
+    // Scenario 2 : Find GCD and LCM of two numbers
+    let a = 56;
+    let b = 98;
+
+    let result_lcm = lcm(a, b);
+    let result_gcd = gcd(a, b);
+
+    println!("LCM and GCD of {a} and {b} are {result_lcm} and {result_gcd}");
 }

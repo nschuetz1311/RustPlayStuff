@@ -24,4 +24,19 @@ fn main() {
     // Removing entry from HashMap
     population.remove("Tokyo");
     println!("{:?}", population);
+
+    //iterating through HashMaps needs to address both key and value
+    for (city, pop) in &population {
+        println!("{} has a population of {}", city, pop);
+    }
+
+    // if only one part of the K/V pair is needed use the respective method
+    // to access them
+    for value in population.values() {
+        println!("population: {}", value);
+    }
+
+    for key in population.keys() {
+        println!("{}", key);
+    }
 }

@@ -50,4 +50,13 @@ fn main() {
     }
 
     println!("the modified vector-output looks like this: {:?}", numbers_b);
+
+    // Preallocating a vector
+    let mut vec = Vec::with_capacity(10);
+
+    for i in 0..vec.capacity() {
+        vec.push(i);
+    }
+
+    println!("Vector: {:?}, Capacity: {}", vec, vec.capacity());
 }

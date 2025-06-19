@@ -39,4 +39,11 @@ fn main() {
     for key in population.keys() {
         println!("{}", key);
     }
+
+    // entry will check if the hashmap has content matching () and if not insert it
+    // however it does not modify the already existing entry
+    population.entry("Paris").or_insert(4000000);
+    population.entry("London").or_insert(20000000);
+
+    println!("{:?}", population);
 }

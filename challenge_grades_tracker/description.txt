@@ -1,0 +1,11 @@
+----- HashMaps challenge -----
+
+Student Grades Tracker
+
+1. Add grades for multiple Student
+2. Find a specific student's grade
+3. Update s student's grade
+4. Remove a student
+5. Print all students and their grade
+
+

@@ -46,4 +46,19 @@ fn main() {
     population.entry("London").or_insert(20000000);
 
     println!("{:?}", population);
+
+
+    // HashMap Perfomance
+    // for better perfomance use: String, i32 or usize as Keys
+    let mut scores = HashMap::with_capacity(10);
+
+    for i in 0..5 {
+        scores.insert(i, i * 10);
+    }
+
+    // the capacity that is actually used might defer from the one I defined
+    // Rust will allocated a capacity which it internally asseses as useful/correct
+    // the minimum capacity however will be 10, the number defined be the developer
+    println!("{:?}", scores);
+    println!("capacity: {}", scores.capacity());
 }
